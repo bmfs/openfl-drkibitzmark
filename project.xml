@@ -65,6 +65,8 @@
         <icon path="Assets/images/wabbit_alpha.png" />
     </section>
 
+    <assets path="Assets/shaders" rename="shaders" />
+
     <!-- optimize output -->
     <haxeflag name="-dce std" />
 

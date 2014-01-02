@@ -5,10 +5,12 @@ import aze.display.TilesheetEx;
 import com.drkibitz.mark.common.MarkBase;
 import flash.geom.Rectangle;
 import flash.geom.Point;
+import rsg.SpecialSprite;
 
 class Main extends MarkBase
 {
-    private var layer:TileLayer;
+    public var layer:TileLayer;
+    public var specialSprite:SpecialSprite;
 
     private function this_createMarkObj():MarkObj
     {
@@ -30,7 +32,10 @@ class Main extends MarkBase
         #end
 
         layer = new TileLayer(sheet, false);
-        addChild(layer.view);
+        //addChild(layer.view);
+
+        specialSprite = new SpecialSprite(layer);
+        addChild(specialSprite);
 
         createMarkObj = this_createMarkObj;
 
